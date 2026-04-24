@@ -1,5 +1,4 @@
 # siglens
-
 LLM-based interpretation layer that converts alerts and events into structured, actionable output for incident response.
 
 Minimal working implementation exposed via a FastAPI service.
@@ -7,7 +6,6 @@ Minimal working implementation exposed via a FastAPI service.
 ---
 
 ## Context
-
 Monitoring systems detect anomalies but leave interpretation to operators.
 
 In high-volume environments, alerts often lack context, prioritization, and clear actionability. This creates a gap between detection and response.
@@ -19,7 +17,6 @@ SigLens introduces an interpretation layer between these stages, converting obse
 ---
 
 ## System Flow
-
 ```
 [ Observability Systems ]  
 (alerts, metrics, events)   
@@ -36,7 +33,6 @@ structured JSON output 
 ---
 
 ## Functionality
-
 Given an alert event, SigLens:
   - summarizes the incident
   - classifies severity
@@ -48,7 +44,6 @@ All outputs are returned as structured JSON for integration into downstream syst
 ---
 
 ## Example
-
 ### Input
 ```json
 {
@@ -75,19 +70,15 @@ All outputs are returned as structured JSON for integration into downstream syst
 ---
 
 ## Architecture
-
 - FastAPI service for alert ingestion
 - LLM-based interpretation engine
 - Structured JSON output validation
 - Designed for integration with observability systems such as Prometheus and Alertmanager  
 
 ## Model Layer
-
 SigLens is designed as a provider-agnostic interface for LLM integration.
-
 ### Current implementation
 - single-alert analysis pipeline
-
 ### Planned
 - OpenAI / Gemini / Claude support
 - model comparison
@@ -97,7 +88,6 @@ SigLens is designed as a provider-agnostic interface for LLM integration.
 ---
 
 ## Tech Stack
-
 - Python
 - FastAPI
 - Pydantic
@@ -108,11 +98,9 @@ SigLens is designed as a provider-agnostic interface for LLM integration.
 ---
 
 ## Status
-
 Minimal working v0 focused on single-alert interpretation via a FastAPI interface.
 
 ## Direction
-
 - alert clustering using embeddings
 - multi-alert correlation
 - drift detection across alert patterns
