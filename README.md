@@ -12,7 +12,7 @@ In high-volume environments, alerts often lack context, prioritization, and clea
 
 SigLens introduces an interpretation layer between these stages, converting observability data into structured outputs that support consistent and faster response.
 
-**observability data → interpretation → response**
+observability data → interpretation → response
 
 ---
 
